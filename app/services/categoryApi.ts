@@ -31,6 +31,12 @@ export const categoryApi = createApi({
                 method:'PUT',
                 body:model.categoryModel
             })
+        }),
+        GetVehiclesByCategoryId:builder.query({
+            query:(categoryId)=>({
+                url:`Category/GetVehicles/${categoryId}`,
+                method:'GET'
+            })
         })
     })
 })
